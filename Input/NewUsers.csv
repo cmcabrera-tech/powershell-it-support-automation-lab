@@ -1,0 +1,5 @@
+FirstName,LastName,Username,Department,Title,OU,Group
+Emma,Reed,emma.reed,IT,IT Support Specialist,"OU=IT,OU=Users,OU=Cabrera Technologies,DC=cabreralab,DC=test",GG_IT_Users
+Noah,Carter,noah.carter,Human Resources,HR Coordinator,"OU=Human Resources,OU=Users,OU=Cabrera Technologies,DC=cabreralab,DC=test",GG_HR_Users
+Mia,Thompson,mia.thompson,Finance,Financial Analyst,"OU=Finance,OU=Users,OU=Cabrera Technologies,DC=cabreralab,DC=test",GG_Finance_Users
+Ethan,Brooks,ethan.brooks,Sales,Sales Representative,"OU=Sales,OU=Users,OU=Cabrera Technologies,DC=cabreralab,DC=test",GG_Sales_Users

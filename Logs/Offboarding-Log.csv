@@ -1,0 +1,2 @@
+"Timestamp","Technician","Username","DisplayName","Department","RemovedGroups","DestinationOU","Status"
+"8/4/2026 12:01:35 AM","Administrator","ethan.brooks","Ethan Brooks","Sales","GG_Sales_Users","OU=Disabled Accounts,OU=Cabrera Technologies,DC=cabreralab,DC=test","Success"
