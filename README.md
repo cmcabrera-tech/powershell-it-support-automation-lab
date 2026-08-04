@@ -11,11 +11,17 @@ PowerShell | Active Directory | Windows Server | Hyper-V | CSV | HTML Reporting
 
 ## Overview
 
-This project demonstrates the use of PowerShell to automate common IT support and Active Directory administrative tasks in a Windows Server lab environment.
+This project showcases the use of PowerShell to automate common IT support and Active Directory administrative tasks in a Windows Server lab environment.
 
 The automation workflows inventory the Active Directory environment, create multiple user accounts from a CSV file, assign departmental security groups, reset passwords, offboard users, generate audit logs, and produce an HTML summary report.
 
-The lab extends the previously created [Active Directory Home Lab](https://github.com/cmcabrera-tech/active-directory-home-lab) by adding repeatable and auditable administrative automation.
+## Portfolio Integration
+
+This lab extends the Windows infrastructure deployed in my [Active Directory Home Lab](https://github.com/cmcabrera-tech/active-directory-home-lab) by introducing repeatable PowerShell automation for common administrative tasks.
+
+The automated workflows support activities commonly performed by IT Support and Systems Administration teams, including user provisioning, password management, offboarding, reporting, and audit logging.
+
+Together with the Active Directory, Help Desk, and Microsoft Entra ID & Intune labs, this project demonstrates both manual administration and administrative automation within a simulated enterprise environment.
 
 ## Objectives
 
@@ -31,6 +37,7 @@ The lab extends the previously created [Active Directory Home Lab](https://githu
 - Disable and relocate offboarded accounts.
 - Generate CSV audit logs for administrative actions.
 - Produce an HTML management summary.
+- Develop reusable PowerShell scripts for common IT support tasks.
 - Implement error handling and rollback protection.
 
 ## Lab Architecture
@@ -63,13 +70,13 @@ flowchart TD
 
 ## Automation Components
 
-| Script | Purpose |
+| Script | Purpose | Output
 |---|---|
-| `Get-ADInventory.ps1` | Inventories Active Directory users, groups, and organizational units |
-| `New-ADUsersFromCSV.ps1` | Creates users from CSV data and assigns departmental groups |
-| `Reset-ADUserPassword.ps1` | Resets passwords, unlocks accounts, and requires password changes |
-| `Disable-ADUserOffboarding.ps1` | Disables accounts, removes groups, and moves users to the disabled OU |
-| `New-AutomationLabReport.ps1` | Generates an HTML summary from Active Directory and audit data |
+| `Get-ADInventory.ps1` | Inventories Active Directory users, groups, and organizational units | Csv |
+| `New-ADUsersFromCSV.ps1` | Creates users from CSV data and assigns departmental groups | Csv Log |
+| `Reset-ADUserPassword.ps1` | Resets passwords, unlocks accounts, and requires password changes | Csv Log |
+| `Disable-ADUserOffboarding.ps1` | Disables accounts, removes groups, and moves users to the disabled OU | Csv Log |
+| `New-AutomationLabReport.ps1` | Generates an HTML summary from Active Directory and audit data | HTML Dashboard |
 
 ## Project Workflow
 
@@ -219,9 +226,23 @@ The final HTML dashboard summarizes Active Directory objects, provisioning activ
 
 Additional chronological evidence is available in the [`screenshots`](screenshots/) directory.
 
+## Validation
+
+The completed automation was successfully validated by:
+
+- Executing the Active Directory inventory script and verifying CSV exports.
+- Provisioning multiple users from structured CSV input.
+- Confirming correct organizational unit placement.
+- Verifying automatic departmental security-group assignments.
+- Successfully completing password-reset operations.
+- Confirming password change at next sign-in.
+- Validating user offboarding, account disablement, and OU relocation.
+- Reviewing generated CSV audit logs.
+- Generating and validating the HTML management summary.
+
 ## Results
 
-The completed automation produced:
+The completed automation successfully produced:
 
 - 3 Active Directory inventory reports.
 - 4 successfully provisioned departmental users.
@@ -235,18 +256,17 @@ The completed automation produced:
 ## Skills Demonstrated
 
 - PowerShell scripting
+- Windows Server administration
 - Active Directory administration
 - User lifecycle management
 - Bulk account provisioning
-- Organizational-unit management
-- Security-group administration
-- Password-reset support
+- Password reset automation
 - Employee offboarding
-- CSV data processing
-- HTML report generation
-- Error handling and rollback
-- Audit logging and documentation
-- Hyper-V lab management
+- CSV processing
+- HTML reporting
+- Audit logging
+- Error handling
+- Technical documentation
 
 ## Security Notice
 
@@ -256,4 +276,6 @@ This repository represents a controlled lab environment. The names and accounts 
 
 **Carlos Cabrera**
 
-IT Support | CompTIA A+ | Active Directory | Windows | Networking | PowerShell
+CompTIA A+ Certified
+
+IT Support | Windows Administration | Active Directory | PowerShell Automation
